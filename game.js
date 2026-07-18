@@ -349,10 +349,7 @@
     ctx.font = "50px serif";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.save();
-    ctx.scale(1, -1);
     ctx.fillText("🚢", 0, 2);
-    ctx.restore();
     ctx.restore();
   }
 

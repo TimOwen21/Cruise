@@ -34,7 +34,7 @@ python3 -m http.server 8000
 - **Move:** Arrow keys / WASD, or click-drag / touch-drag the ship
 - **Pause:** `P`
 - Dodge 🧊 icebergs, 🪨 rocks and 🌀 storms (they cost a life)
-- Collect 🛟 life rings, 💰 treasure and 🧑 passengers for points
+- Collect 🛟 life rings, 💰 treasure, 🧑 passengers, and rare 🍺 beer mugs (worth the most points!)
 - Speed and spawn rate ramp up the longer you survive
 - Your best score is saved locally in the browser (`localStorage`)
 

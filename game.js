@@ -117,6 +117,10 @@
     { emoji: "💰", r: 20, points: 25, kind: "collectible" },
     { emoji: "🧑", r: 20, points: 15, kind: "collectible" },
   ];
+  const RARE_COLLECTIBLE_TYPES = [
+    { emoji: "🍺", r: 20, points: 40, kind: "collectible" },
+  ];
+  const RARE_CHANCE = 0.18;
 
   function rand(min, max) {
     return Math.random() * (max - min) + min;
@@ -132,7 +136,11 @@
 
   function spawnEntity() {
     const isObstacle = Math.random() < 0.62;
-    const def = isObstacle ? pick(OBSTACLE_TYPES) : pick(COLLECTIBLE_TYPES);
+    const def = isObstacle
+      ? pick(OBSTACLE_TYPES)
+      : Math.random() < RARE_CHANCE
+      ? pick(RARE_COLLECTIBLE_TYPES)
+      : pick(COLLECTIBLE_TYPES);
     entities.push({
       ...def,
       x: rand(bounds.minX, bounds.maxX),

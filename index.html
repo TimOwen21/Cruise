@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Ocean Cruiser</title>
+  <meta name="description" content="Steer your cruise ship across the open ocean, dodge icebergs and storms, and rescue passengers in this sample browser game." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚢</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-wrap">
+    <header id="hud">
+      <div class="hud-item"><span class="hud-label">Score</span><span id="score">0</span></div>
+      <div class="hud-item"><span class="hud-label">Best</span><span id="best">0</span></div>
+      <div class="hud-item" id="lives-wrap"><span class="hud-label">Lives</span><span id="lives">⚓⚓⚓</span></div>
+    </header>
+
+    <canvas id="game" width="480" height="720"></canvas>
+
+    <div id="overlay" class="screen">
+      <h1>🚢 Ocean Cruiser</h1>
+      <p class="tagline">Sail the open sea. Dodge icebergs &amp; storms. Rescue passengers.</p>
+      <div id="overlay-body"></div>
+      <button id="start-btn">Set Sail</button>
+      <p class="controls-hint">
+        <strong>Move:</strong> Arrow keys / WASD / Drag or Swipe &nbsp;·&nbsp;
+        <strong>Pause:</strong> P
+      </p>
+    </div>
+  </div>
+
+  <footer id="footer">
+    <p>Sample project — Ocean Cruiser. Open source, built for sharing.</p>
+  </footer>
+
+  <script src="game.js"></script>
+</body>
+</html>
